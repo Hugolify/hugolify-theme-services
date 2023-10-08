@@ -1,5 +1,7 @@
+{{ $paginator := .Paginator.Pages }}
 {{ $atf := true }}
 {{ if partial "func/HasImageHero" . }}
   {{ $atf = false }}
 {{ end }}
-{{ partial "services/items" (dict "pages" .Pages.ByTitle "abovethefold" $atf) }}
+{{ partial "services/items" (dict "pages" $paginator "abovethefold" $atf) }}
+{{ partial "nav/pagination.html" . }}

@@ -1,9 +1,9 @@
-{{ define "hero"}}
+{{ define "hero" }}
   {{- partial "services/hero" . -}}
 {{ end }}
 
 {{ define "main" }}
   {{ partial "services/schema" . }}
-  {{ partial "blocks/list" . }}
+  {{ partial "services/blocks" . }}
   {{ partial "services/container" . }}
 {{ end }}

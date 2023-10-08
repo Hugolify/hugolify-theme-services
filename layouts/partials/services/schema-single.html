@@ -2,10 +2,34 @@
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": {{ .Title | plainify | safeHTML }},
-    {{ with .Description }}
-      "description": {{ partial "func/TruncateContent" (dict "content" .) }},
+    "headline": {{ .Title }},
+
+    {{ with .Params.image }}
+      "thumbnailUrl": {{ . | absURL }},
     {{ end }}
-    "url": {{ .Permalink }}
+
+    {{ with .Date }}
+      "dateCreated": {{ . }},
+    {{ end }}
+
+    {{ with .Params.services_types }}
+      {{ $services_types := partial "func/GetTaxonomy" (dict "slug" . "taxonomy" "services_types")  }}
+      {{ with $services_types }}
+        "articleSection": {{ .Title | plainify | safeHTML }},
+      {{ end }}
+    {{ end }}
+
+    {{ with .Description }}
+      "abstract": {{ . | plainify | safeHTML }},
+    {{ end }}
+
+    {{ with .Content }}
+      "description": {{ . | plainify | safeHTML }},
+    {{ end }}
+
+    {{ with .Site.Title }}
+      "author": {{ . }}
+    {{ end }}
+
   }
 </script>

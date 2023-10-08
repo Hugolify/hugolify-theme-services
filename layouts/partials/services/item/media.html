@@ -3,14 +3,20 @@
 {{ if .Scratch.Get "scrollsnap" }}
   {{ $mobile = site.Params.services.thumbnail.scrollsnap | default false }}
 {{ end }}
+{{ $lazy := true }}
+{{ if .Scratch.Get "notLazy" }}
+  {{ $lazy = false }}
+{{ end }}
 <div class="media">
-{{ with .Params.image}}
+  {{ with .Params.image }}
     {{ partial "commons/image.html" (dict
       "src" .src
       "alt" .alt
       "desktop" $desktop
       "mobile" $mobile
       "itemprop" "image"
-    ) }}
-{{ end }}
+      "lazy" $lazy
+      )
+    }}
+  {{ end }}
 </div>

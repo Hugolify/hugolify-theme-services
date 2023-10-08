@@ -1,0 +1,7 @@
+<div class="metas">
+  {{ partial "services/date" . }}
+  {{ $services_categories := "services/services_categories.html" }}
+  {{ if templates.Exists ( printf "partials/%s" $services_categories ) }}
+    {{ partial $services_categories . }}
+  {{ end }}
+</div>

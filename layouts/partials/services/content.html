@@ -1,1 +1,5 @@
-{{ partial "commons/content" . }}
+<div class="content" {{ partial "func/SetAnim" (dict "element" "content") }}>
+  {{ partial "services/featured-image" . }}
+  {{ partial "services/images" . }}
+  {{ partial "services/body" . }}
+</div>

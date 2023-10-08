@@ -1,24 +1,6 @@
 .page-services
-    .hero-content
-        @extend .col-md-8
-        @extend .col-xl-7
-    .service-persons,
-    .latest
-        @include margin-top($global-spacing-double)
-
-    @include media-breakpoint-up(md)
-        .grid
-            >
-                *
-                    grid-row: unset
-                .service-persons,
-                .latest
-                    grid-column: 1/13
-                    
-    @include media-breakpoint-down(md)
-        .grid
-            >
-                .service-persons
-                    order: 5
-                .latest
-                    order: 6
+    .heading
+        h1
+            min-width: 100%
+    .images + .content-body
+        @include margin-top($global-spacing)

@@ -1,0 +1,3 @@
+{{ with .Date }}
+  <p class="date">{{ partial "commons/time" (dict "date" . "format" "January 2006") }}</p>
+{{ end }}

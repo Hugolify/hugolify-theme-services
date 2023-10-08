@@ -1,3 +1,6 @@
-<div class="sidebar"{{ partial "func/SetAnim" (dict "element" "sidebar") }}>
-  {{ partial "services/featured-image" . }}
+<div class="sidebar" {{ partial "func/SetAnim" (dict "element" "sidebar") }}>
+  {{ partial "services/metas" . }}
+  {{ partial "services/description" . }}
+  {{ partial "services/datas" . }}
+  {{ partial "commons/share" . }}
 </div>
