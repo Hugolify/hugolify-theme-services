@@ -17,5 +17,8 @@
         "hugo-theme",
         "bootstrap"
     ],
-    "license": "MIT"
+    "license": "MIT",
+    "dependencies": {
+        "prettier-plugin-go-template": "^0.0.15"
+    }
 }
