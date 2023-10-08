@@ -1,0 +1,28 @@
+.service
+    --bs-card-spacer-x: 0
+    --bs-card-border-width: 0
+    --bs-card-border-radius: 0
+    --bs-card-inner-border-radius: 0
+    --bs-card-bg: transparent
+    --bs-card-cap-bg: transparent
+    --bs-card-cap-padding-x: 0
+    --bs-card-cap-padding-y: 0
+    @extend .card
+    .media
+        --bs-aspect-ratio: 43%
+    a
+        @extend .stretched-link
+    .btn
+        @extend .btn-link
+        @extend .btn-sm
+        margin-left: calc(var(--bs-btn-padding-x) * -1)
+        @if variable-exists(bootstrap-icons-map)
+            &::after
+                @include icon("arrow-right-short")
+                font-size: 1rem
+                margin-left: .2rem
+                transition: transform $transition-duration $transition-effect
+    
+    @media (prefers-reduced-motion: no-preference)
+        a:hover .btn::after
+            transform: translateX(.5rem)

@@ -1,0 +1,26 @@
+module:
+  mounts:
+    - source: archetypes
+      target: archetypes
+    - source: assets
+      target: assets
+    - source: i18n
+      target: i18n
+    - source: layouts
+      target: layouts
+    - source: admin
+      target: static/admin
+
+params:
+  services:
+    thumbnail:
+      desktop: "414x177"
+      mobile: "300x129"
+      scrollsnap: "240x103"
+    image:
+      desktop: "300x"
+      mobile: "300x"
+
+# Default
+permalinks:
+  services: /services/:slug/

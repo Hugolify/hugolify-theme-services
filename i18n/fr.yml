@@ -1,0 +1,17 @@
+services:
+  all: Tous les services
+  latest: Derniers services
+  discover: Découvrez le service
+  discover_persons:
+    one: Notre expert en {{ .Title }}
+    other: Nos experts en {{ .Title }}
+  more: Découvrir plus de services
+  persons:
+    one: Notre expert
+    other: Nos experts
+  related:
+    one: Le service lié
+    other: Les services liés
+  title:
+    one: Service
+    other: Services

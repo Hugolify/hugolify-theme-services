@@ -1,0 +1,17 @@
+services:
+  all: All services
+  latest: Latest services
+  discover: Discover the service
+  discover_persons:
+    one: Our {{ .Title }}’s  expert
+    other: Our {{ .Title }}’s  experts
+  more: Discover more services
+  persons:
+    one: Our expert
+    other: Our experts
+  related:
+    one: Related service
+    other: Related service
+  title:
+    one: Service
+    other: Services
