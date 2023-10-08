@@ -2,9 +2,9 @@
   "name": "hugolify-theme-services",
   "version": "0.0.0",
   "homepage": "https://www.hugolify.io",
-  "repository": "https://github.com/arthaud-proust-pro/hugolify-theme-services",
+  "repository": "https://github.com/hugolify/hugolify-theme-services",
   "bugs": {
-    "url": "https://github.com/arthaud-proust-pro/hugolify-theme-services/issues"
+    "url": "https://github.com/hugolify/hugolify-theme-services/issues"
   },
   "author": {
     "email": "proust@arthaud.dev",

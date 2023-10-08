@@ -1,2 +1,2 @@
-module github.com/arthaud-proust-pro/hugolify-theme-services
+module github.com/hugolify/hugolify-theme-services
 go 1.19
