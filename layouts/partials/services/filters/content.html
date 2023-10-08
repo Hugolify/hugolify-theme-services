@@ -1,6 +1,6 @@
-<div class="content">
-  {{ $services_categories := "services/filters/services_categories.html" }}
-  {{ if templates.Exists ( printf "partials/%s" $services_categories ) }}
+{{ $services_categories := "services/filters/services_categories.html" }}
+{{ if templates.Exists ( printf "partials/%s" $services_categories ) }}
+  <div class="content">
     {{ partial $services_categories . }}
-  {{ end }}
-</div>
+  </div>
+{{ end }}

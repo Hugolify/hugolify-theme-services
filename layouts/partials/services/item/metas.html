@@ -1,9 +1,7 @@
-<div class="metas">
-  <p>
-    {{ partial "commons/time" (dict "date" .Date "format" ":date_long") }}
-    {{ $services_categories := "services/item/services_categories.html" }}
-    {{ if templates.Exists ( printf "partials/%s" $services_categories ) }}
-      {{ partial $services_categories . }}
-    {{ end }}
-  </p>
-</div>
+{{ $services_categories := "services/item/services_categories.html" }}
+
+{{ if templates.Exists ( printf "partials/%s" $services_categories ) }}
+  <div class="metas">
+    {{ partial $services_categories . }}
+  </div>
+{{ end }}
