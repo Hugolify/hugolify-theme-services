@@ -1,0 +1,10 @@
+{{ with .Params.items }}
+  {{ $person := index . 0 }}
+  {{ with $person }}
+    {{ $realPerson = partial "func/GetRealPerson" . }}
+    {{ with $realPerson }}
+      {{ . }}
+    {{ end }}
+
+  {{ end }}
+{{ end }}
