@@ -3,6 +3,7 @@ services:
   discover: Découvrir le service
   latest: Derniers services
   more: Découvrir plus de services
+  schedule_appointment: Prendre rendez-vous
   title:
     one: Service
     other: Services

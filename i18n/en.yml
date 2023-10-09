@@ -3,6 +3,7 @@ services:
   discover: Discover service
   latest: Latest services
   more: Discover more services
+  schedule_appointment: Schedule an appointment
   title:
     one: Service
     other: Services
