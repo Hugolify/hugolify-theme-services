@@ -1,6 +1,6 @@
-{{ with .Params.image }}
+{{ with .Params.image}}
   {{ $desktop := site.Params.services.image.desktop | default false }}
-  {{ $mobile := site.Params.services.image.mobile | default false }}
+  {{ $mobile := site.Params.image.mobile_full | default false }}
   {{ partial "commons/image.html" (dict
     "src" .src
     "alt" .alt
@@ -9,6 +9,5 @@
     "desktop" $desktop
     "mobile" $mobile
     "lazy" false
-    )
-  }}
+  ) }}
 {{ end }}
