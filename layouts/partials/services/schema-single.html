@@ -2,34 +2,35 @@
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "headline": {{ .Title }},
+    "name": {{ .Title | plainify }},
+    "url": {{ .Permalink }},
 
-    {{ with .Params.image }}
-      "thumbnailUrl": {{ .src | absURL }},
-    {{ end }}
+    {{- with .Params.image }}
+      "image": {{ .src | absURL }},
+    {{ end -}}
 
-    {{ with .Date }}
-      "dateCreated": {{ . }},
-    {{ end }}
+    {{- if .Content -}}
+      {{- with .Content -}}
+        "description": {{ . | plainify | safeHTML }},
+      {{ end -}}
+    {{ else }}
+      {{- with .Description -}}
+        "description": {{ . | plainify | safeHTML }},
+      {{ end -}}
+    {{ end -}}
 
-    {{ with .Params.services_types }}
-      {{ $services_types := partial "func/GetTaxonomy" (dict "slug" . "taxonomy" "services_types")  }}
-      {{ with $services_types }}
-        "articleSection": {{ .Title | plainify | safeHTML }},
+    {{- if .Params.services_categories -}}
+      {{ range .GetTerms "services_categories" }}
+        "serviceType": {{ .Title | plainify }},
       {{ end }}
-    {{ end }}
+    {{- end -}}
 
-    {{ with .Description }}
-      "abstract": {{ . | plainify | safeHTML }},
-    {{ end }}
-
-    {{ with .Content }}
-      "description": {{ . | plainify | safeHTML }},
-    {{ end }}
-
-    {{ with .Site.Title }}
-      "author": {{ . }}
-    {{ end }}
-
+    {{- if .Params.services_persons -}}
+      {{ range .GetTerms "services_persons" }}
+        "provider": {{ .Title | plainify }},
+      {{ end }}
+    {{- else -}}
+      "provider": {{ site.Title | plainify }},
+    {{- end }}
   }
 </script>
