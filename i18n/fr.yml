@@ -7,7 +7,6 @@ services:
   list_person: Liste des services de {{ .Person }}
   more: Découvrir plus de services
   more_person: Découvrir plus de services de {{ .Person }}
-  schedule_appointment: Prendre rendez-vous
   title:
     one: Service
     other: Services

@@ -1,1 +1,11 @@
-{{ partial "commons/heading" . }}
+{{ if not (partial "func/HasHero" .) }}
+  <header class="heading"{{ partial "func/SetAnim" (dict "element" "heading") }}>
+    {{ $services_categories := "services/services_categories.html" }}
+    {{ if templates.Exists ( printf "partials/%s" $services_categories ) }}
+      {{ partial $services_categories . }}
+    {{ end }}
+    {{ with .Title }}
+      <h1>{{ partial "func/PrepareHTML" . }}</h1>
+    {{ end }}
+  </header>
+{{ end }}

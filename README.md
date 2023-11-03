@@ -6,7 +6,7 @@ Edit `config/_default/module.yaml` to install the `hugolify-theme-services` modu
 
 ```yml
 imports:
-  - path: github.com/arthaud-proust-pro/hugolify-theme-services
+  - path: github.com/hugolify/hugolify-theme-services
 ```
 
 ## Documentation
