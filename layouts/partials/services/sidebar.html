@@ -1,4 +1,7 @@
 <div class="sidebar" {{ partial "func/SetAnim" (dict "element" "sidebar") }}>
+  {{ with .Params.price_per_unit }}
+    {{ partial "services/price-per-unit" . }}
+  {{ end }}
   {{ partial "services/person" . }}
   {{ partial "commons/share" . }}
 </div>

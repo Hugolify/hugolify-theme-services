@@ -12,3 +12,67 @@
         --bs-aspect-ratio: 43%
     a
         @extend .stretched-link
+
+
+.price-per-unit
+    --bs-card-bg: transparent
+    --bs-card-border-width: 0
+    --bs-card-border-radius: 0
+    --bs-card-cap-bg: transparent
+    --bs-card-inner-border-radius: 0
+    --bs-card-spacer-x: 0rem
+    --bs-card-spacer-y: 0rem
+    @extend .card
+    .description
+        @extend .small
+    a
+        @extend .stretched-link
+
+aside.price-per-unit
+    --bs-card-bg: #{$light}
+    --bs-card-border-radius: 1rem
+    --bs-card-spacer-x: 2rem
+    --bs-card-spacer-y: 2rem
+    .description
+        @extend .small
+        color: $text-muted
+    ul
+        font-size: $small-font-size
+        list-style: none
+        line-height: 1.8
+        padding-left: 0
+        margin-bottom: 1.5rem
+        margin-top: 1.5rem
+        @if variable-exists(bootstrap-icons-map)
+            b
+                display: none
+            .email
+                &::before
+                    @include icon("envelope")
+                    margin-right: .5em
+            .fax
+                &::before
+                    @include icon("printer")
+                    margin-right: .5em
+            .phone
+                &::before
+                    @include icon("phone")
+                    margin-right: .5em
+    .btn
+        @extend .btn-primary
+        text-wrap: balance
+    .more
+        font-size: $small-font-size
+        @if variable-exists(bootstrap-icons-map)
+            &::before
+                @include icon("arrow-right")
+                font-size: 1rem
+                margin-right: .5rem
+                vertical-align: -0.25em
+    a::after
+        content: none
+
+    .sidebar > & + &
+        margin-top: - $spacer
+        @include media-breakpoint-up(md)
+            margin-top: calc(#{$global-spacing} * -1 + #{$spacer})

@@ -1,4 +1,7 @@
 <a href="{{ .Permalink }}" itemprop="url" class="content">
   {{ partial "services/item/metas" . }}
   {{ partial "commons/item/title" . }}
+  {{ with .Params.price_per_unit }}
+    {{ partial "services/item/price-per-unit" . }}
+  {{ end }}
 </a>
