@@ -4,7 +4,8 @@
   {{- $mobile = site.Params.services.thumbnail.scrollsnap | default false -}}
 {{ end }}
 {{ partial "commons/item/media.html" (dict
-      "context" .
-      "desktop" $desktop
-      "mobile" $mobile
-    ) }}
+  "context" .
+  "desktop" $desktop
+  "mobile" $mobile
+  )
+}}

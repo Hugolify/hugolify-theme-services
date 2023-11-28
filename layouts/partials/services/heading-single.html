@@ -1,5 +1,8 @@
 {{ if not (partial "func/HasHero" .) }}
-  <header class="heading"{{ partial "func/SetAnim" (dict "element" "heading") }}>
+  <header
+    class="heading"
+    {{ partial "func/SetAnim" (dict "element" "heading") }}
+  >
     {{ $services_categories := "services/services_categories.html" }}
     {{ if templates.Exists ( printf "partials/%s" $services_categories ) }}
       {{ partial $services_categories . }}
