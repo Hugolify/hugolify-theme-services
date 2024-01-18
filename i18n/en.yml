@@ -7,6 +7,7 @@ services:
   list_person: List of {{ .Person }}’s services
   more: Discover more services
   more_person: Discover more services by {{ .Person }}
+  related: Others services
   title:
     one: Service
     other: Services
