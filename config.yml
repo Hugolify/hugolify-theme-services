@@ -4,17 +4,17 @@ module:
       target: archetypes
     - source: assets
       target: assets
+    - source: content
+      target: content
     - source: i18n
       target: i18n
     - source: layouts
       target: layouts
-    - source: admin
-      target: static/admin
-
 params:
   services:
     thumbnail:
-      desktop: "414x177"
+      desktop: "416x179"
+      desktop_large: '636x273'
       mobile: "300x129"
       scrollsnap: "240x103"
 
