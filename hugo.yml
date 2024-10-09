@@ -11,6 +11,9 @@ module:
     - source: layouts
       target: layouts
 params:
+  admin:
+    collections:
+      services: true
   services:
     thumbnail:
       desktop: "416x179"
