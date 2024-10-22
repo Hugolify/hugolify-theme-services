@@ -13,7 +13,8 @@ module:
 params:
   admin:
     collections:
-      services: true
+      services:
+        enable: true
   services:
     thumbnail:
       desktop: "416x179"
