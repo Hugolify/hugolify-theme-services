@@ -1,2 +1,2 @@
 module github.com/hugolify/hugolify-theme-services
-go 1.19
+go 1.21
