@@ -11,11 +11,11 @@
 
     {{- if .Content -}}
       {{- with .Content -}}
-        "description": {{ . | plainify | safeHTML }},
+        "description": {{ partial "func/PrepareData.html" . }},
       {{ end -}}
     {{ else }}
       {{- with .Description -}}
-        "description": {{ . | plainify | safeHTML }},
+        "description": {{ partial "func/PrepareData.html" . }},
       {{ end -}}
     {{ end -}}
 
