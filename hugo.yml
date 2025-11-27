@@ -26,7 +26,12 @@ params:
           - field: isIndex
             value: false
         icon:
-          sveltiacms: business_center
+          bootstrap_icons: suitcase-lg
+          iconoir: suitcase
+          lucide: handshake
+          material_icons: business_center
+          material_symbols: business_center
+          sveltiacms: business_center # legacy
   services:
     thumbnail:
       desktop: "416x179"
