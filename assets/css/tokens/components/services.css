@@ -1,0 +1,9 @@
+/* Do not edit directly, this file was auto-generated. */
+
+/* services.css */
+@layer tokens {
+  :root {
+    --services-min-width: var(--items-min-width);
+    --services-nav-margin-block-start: var(--items-nav-margin-block-start);
+  }
+}

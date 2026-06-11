@@ -1,0 +1,16 @@
+/* css/modules/services.css — hugolify-theme-services entry point */
+
+/* Tokens */
+@import '../tokens/services.css';
+
+/* Components */
+@import '../components/service.css';
+@import '../components/services.css';
+
+/* Pages */
+@import '../pages/service.css';
+@import '../pages/services.css';
+
+/* Modules / Taxonomies */
+@import 'services-categories.css';
+@import 'services-persons.css';

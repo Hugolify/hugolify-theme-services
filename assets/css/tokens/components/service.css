@@ -1,0 +1,42 @@
+/* Do not edit directly, this file was auto-generated. */
+
+/* service.css */
+@layer tokens {
+  :root {
+    --service-border-radius: var(--item-border-radius);
+    --service-border-style: var(--item-border-style);
+    --service-border-width: var(--item-border-width);
+    --service-btn-border-width: var(--item-btn-border-width);
+    --service-btn-color-background: var(--item-btn-color-background);
+    --service-btn-color-text: var(--item-btn-color-text);
+    --service-btn-padding: var(--item-btn-padding);
+    --service-btn-text-decoration: var(--item-btn-text-decoration);
+    --service-btn-text-decoration-hover: var(--item-btn-text-decoration-hover);
+    --service-color-background: var(--item-color-background);
+    --service-color-border: var(--item-color-border);
+    --service-color-text: var(--item-color-text);
+    --service-color-text-muted: var(--item-color-text-muted);
+    --service-gap: var(--item-gap);
+    --service-media-color-background: var(--item-media-color-background);
+    --service-media-order: var(--item-media-order);
+    --service-media-ratio: var(--item-media-ratio);
+    --service-metas-border-end: var(--item-metas-border-end);
+    --service-metas-border-start: var(--item-metas-border-start);
+    --service-metas-color-background: var(--item-metas-color-background);
+    --service-metas-font-size: var(--item-metas-font-size);
+    --service-metas-order: var(--item-metas-order);
+    --service-metas-padding-inline: var(--item-metas-padding-inline);
+    --service-metas-padding-block-start: var(--item-metas-padding-block-start);
+    --service-metas-padding-block-end: var(--item-metas-padding-block-end);
+    --service-order: var(--item-order);
+    --service-padding-inline: var(--item-padding-inline);
+    --service-padding-block: var(--item-padding-block);
+    --service-shadow: var(--item-shadow);
+    --service-shadow-hover: var(--item-shadow-hover);
+    --service-title-color: var(--item-title-color);
+    --service-title-font-size: var(--item-title-font-size);
+    --service-title-font-weight: var(--item-title-font-weight);
+    --service-title-line-height: var(--item-title-line-height);
+    --service-transition: var(--item-transition);
+  }
+}

@@ -1,0 +1,58 @@
+/* components/service.css */
+/*
+ * .service remaps the full --item-* API (and the inner --btn-*) onto its
+ * --service-* tokens, so any value can be tuned from service.json without
+ * touching this file.
+ * Usage: <article class="item service">
+ */
+@layer components {
+  .service {
+    /* Box */
+    --item-color-background: var(--service-color-background);
+    --item-color-border: var(--service-color-border);
+    --item-color-text: var(--service-color-text);
+    --item-color-text-muted: var(--service-color-text-muted);
+    --item-border-radius: var(--service-border-radius);
+    --item-border-style: var(--service-border-style);
+    --item-border-width: var(--service-border-width);
+    --item-shadow: var(--service-shadow);
+    --item-shadow-hover: var(--service-shadow-hover);
+    --item-transition: var(--service-transition);
+
+    /* Content */
+    --item-gap: var(--service-gap);
+    --item-order: var(--service-order);
+    --item-padding-block: var(--service-padding-block);
+    --item-padding-inline: var(--service-padding-inline);
+
+    /* Title */
+    --item-title-color: var(--service-title-color);
+    --item-title-font-size: var(--service-title-font-size);
+    --item-title-font-weight: var(--service-title-font-weight);
+    --item-title-line-height: var(--service-title-line-height);
+
+    /* Metas */
+    --item-metas-border-end: var(--service-metas-border-end);
+    --item-metas-border-start: var(--service-metas-border-start);
+    --item-metas-color-background: var(--service-metas-color-background);
+    --item-metas-font-size: var(--service-metas-font-size);
+    --item-metas-order: var(--service-metas-order);
+    --item-metas-padding-block-end: var(--service-metas-padding-block-end);
+    --item-metas-padding-block-start: var(--service-metas-padding-block-start);
+    --item-metas-padding-inline: var(--service-metas-padding-inline);
+
+    /* Media */
+    --item-media-color-background: var(--service-media-color-background);
+    --item-media-order: var(--service-media-order);
+    --item-media-ratio: var(--service-media-ratio);
+
+    /* Inner button (--btn-* is the button component's own API) */
+    --btn-border-width: var(--service-btn-border-width);
+    --btn-color-background: var(--service-btn-color-background);
+    --btn-color-text: var(--service-btn-color-text);
+    --btn-color-text-decoration: var(--service-btn-text-decoration);
+    --btn-color-text-decoration-hover: var(--service-btn-text-decoration-hover);
+    --btn-padding-inline: var(--service-btn-padding);
+    --btn-padding-block: var(--service-btn-padding);
+  }
+}
