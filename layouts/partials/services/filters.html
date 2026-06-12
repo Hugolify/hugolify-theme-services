@@ -1,4 +1,4 @@
 {{ $hasCategories := partial "func/HasTaxonomyAvailable" (dict "section" "services" "taxonomy" "services_categories") }}
 {{ if $hasCategories }}
-  {{ partial "commons/filters.html" (dict "context" . "section" "posts") }}
+  {{ partial "commons/filters.html" (dict "context" . "section" "services") }}
 {{ end }}
