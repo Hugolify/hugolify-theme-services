@@ -1,0 +1,12 @@
+/* components/services.css */
+/*
+ * .services remaps the full --items-* API onto its --services-* tokens, so any
+ * value can be tuned from services.json without touching this file.
+ * Usage: <article class="items services">
+ */
+@layer components {
+  .services {
+    --items-min-width: var(--services-min-width);
+    --items-nav-margin-block-start: var(--services-nav-margin-block-start);
+  }
+}

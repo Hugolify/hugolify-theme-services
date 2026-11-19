@@ -7,7 +7,7 @@
       <h2>{{ i18n "services.related" }}</h2>
       <a href="../" class="more">{{ i18n (printf "%s.more" $section) }}</a>
     </header>
-    {{ partial "services/items" (dict "pages" $pages) }}
+    {{ partial "services/items.html" (dict "pages" $pages "scrollsnap" true) }}
   </div>
 </section>
 {{ end }}

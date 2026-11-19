@@ -1,4 +1,5 @@
-<article class="service" itemscope itemtype="http://schema.org/Service" {{- partial "func/SetAnim.html" (dict "element" "item") }}>
-  {{ partial "services/item/content" . }}
-  {{ partial "services/item/media" . }}
+<article class="item service" {{- partial "func/SetAnim.html" (dict "element" "item") }}>
+  {{ partial "services/item/content.html" . }}
+  {{ partial "services/item/metas.html" . }}
+  {{ partial "services/item/media.html" . }}
 </article>

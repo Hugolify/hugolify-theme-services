@@ -1,0 +1,7 @@
+/* components/service.css */
+/*
+ * .service is where the --item-* API (and the inner --btn-*) gets remapped
+ * onto --service-* tokens, once service.json declares some. It declares none
+ * yet, so a service looks like any other item.
+ * Usage: <article class="item service">
+ */
