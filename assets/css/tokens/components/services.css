@@ -3,7 +3,7 @@
 /* services.css */
 @layer tokens {
   :root {
-    --services-min-width: var(--items-min-width);
-    --services-nav-margin-block-start: var(--items-nav-margin-block-start);
+    --services-min-width: var(--max-width-item);
+    --services-nav-margin-block-start: var(--spacing-fluid-md);
   }
 }

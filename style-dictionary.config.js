@@ -52,7 +52,7 @@ StyleDictionary.registerTransformGroup({
 });
 
 // -------------------------------------------------------
-// Format — @layer tokens
+// Format: @layer tokens
 // -------------------------------------------------------
 
 StyleDictionary.registerFormat({
@@ -86,7 +86,7 @@ const rel = file => path.relative(componentDir, file).replace(/\.json$/, '');
 // trees must be included for the references to resolve.
 for (const pkg of ['@uncinq/design-tokens', '@uncinq/component-tokens']) {
   if (!fs.existsSync(`./node_modules/${pkg}`)) {
-    throw new Error(`Missing ${pkg} — run npm install first.`);
+    throw new Error(`Missing ${pkg}: run npm install first.`);
   }
 }
 
@@ -112,14 +112,14 @@ await new StyleDictionary({
 }).buildAllPlatforms();
 
 // -------------------------------------------------------
-// Barrel — assets/css/tokens/posts.css imports every generated component token
-// file. Token files are discovered from disk, so modules/posts.css imports this
+// Barrel: assets/css/tokens/services.css imports every generated component token
+// file. Token files are discovered from disk, so modules/services.css imports this
 // barrel once and adding a token JSON needs no manual edit. Each file declares
 // its own @layer tokens, so a plain @import is enough.
 // -------------------------------------------------------
 
 fs.writeFileSync(
   './assets/css/tokens/services.css',
-  '/* services.css — barrel, do not edit */\n' +
+  '/* services.css: barrel, do not edit */\n' +
     tokenFiles.map(file => `@import "./components/${rel(file)}.css";`).join('\n') + '\n',
 );

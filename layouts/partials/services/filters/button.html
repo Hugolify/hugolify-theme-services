@@ -1,4 +1,4 @@
-{{- $hasCategories := partial "func/HasTaxonomyAvailable" (dict "section" "services" "taxonomy" "services_categories") -}}
+{{- $hasCategories := partial "func/HasTaxonomyAvailable.html" (dict "section" "services" "taxonomy" "services_categories") -}}
 {{- if $hasCategories }}
-  {{ partial "commons/filters/button" . }}
-{{ end }}
+  {{ partial "commons/filters/button.html" . }}
+{{ end -}}

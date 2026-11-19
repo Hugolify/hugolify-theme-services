@@ -1,36 +1,22 @@
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": {{ .Title | plainify }},
-    "url": {{ .Permalink }},
+{{- /* Schema.org for a service: a Service, see func/GetSchemaService.html.
 
-    {{- with .Params.image }}
-      "image": {{ .src | absURL }},
-    {{ end -}}
+       Provided by its persons (services-persons module), or by the
+       organization behind the site when it has none, and typed by its
+       categories (services-categories module), each read when the site
+       declares it. */ -}}
+{{- $providers := slice -}}
+{{- range partial "func/GetSchemaTerms.html" (dict "page" . "taxonomy" "services_persons" "format" "page") -}}
+  {{- $providers = $providers | append (partial "func/GetSchemaPerson.html" (dict "page" . "compact" true)) -}}
+{{- end -}}
 
-    {{- if .Content -}}
-      {{- with .Content -}}
-        "description": {{ partial "func/PrepareData.html" . }},
-      {{ end -}}
-    {{ else }}
-      {{- with .Description -}}
-        "description": {{ partial "func/PrepareData.html" . }},
-      {{ end -}}
-    {{ end -}}
+{{- $service := partial "func/GetSchemaService.html" (dict "page" . "provider" $providers) -}}
+{{- with partial "func/GetSchemaTerms.html" (dict "page" . "taxonomy" "services_categories") -}}
+  {{- $service = merge $service (dict "serviceType" .) -}}
+{{- end -}}
 
-    {{- if .Params.services_categories -}}
-      {{ range .GetTerms "services_categories" }}
-        "serviceType": {{ .Title | plainify }},
-      {{ end }}
-    {{- end -}}
+{{- $webpage := partial "func/GetSchemaWebPage.html" (dict
+  "page" .
+  "mainEntity" (dict "@id" (index $service "@id"))
+) -}}
 
-    {{- if .Params.services_persons -}}
-      {{ range .GetTerms "services_persons" }}
-        "provider": {{ .Title | plainify }},
-      {{ end }}
-    {{- else -}}
-      "provider": {{ site.Title | plainify }},
-    {{- end }}
-  }
-</script>
+{{- partial "commons/jsonld.html" (slice $webpage $service) -}}

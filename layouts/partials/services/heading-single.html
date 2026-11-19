@@ -1,7 +1,7 @@
-{{- if not (partial "func/HasHero" .) }}
+{{- if not (partial "func/HasHero.html" .) }}
   <header class="heading" {{- partial "func/SetAnim.html" (dict "element" "heading") }}>
     {{- $services_categories := "services/services_categories.html" -}}
-    {{- if templates.Exists ( printf "partials/%s" $services_categories ) }}
+    {{- if templates.Exists ( printf "_partials/%s" $services_categories ) }}
       {{ partial $services_categories . }}
     {{ end -}}
     {{- with .Title }}

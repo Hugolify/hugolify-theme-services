@@ -1,14 +1,14 @@
 {
   "services": {
     "minWidth": {
-      "$value": "{items.minWidth}",
+      "$value": "{maxWidth.item}",
       "$type": "dimension"
     },
     "nav": {
       "margin": {
         "blockStart": {
           "$type": "dimension",
-          "$value": "{items.nav.margin.blockStart}"
+          "$value": "{spacing.fluid.md}"
         }
       }
     }

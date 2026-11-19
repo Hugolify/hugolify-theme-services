@@ -11,13 +11,9 @@ module:
     - source: layouts
       target: layouts
 
-# Default
-permalinks:
-  page:
-    services: /services/:slug/
-
-# Admin
 params:
+
+  # Hugolify admin
   admin:
     collections:
       services:
@@ -31,10 +27,17 @@ params:
           lucide: handshake
           material_icons: business_center
           material_symbols: business_center
-          sveltiacms: business_center # legacy
+        sortable_fields: [weight, title]
+
+  # Image
   services:
     thumbnail:
-      desktop: "416x179"
-      desktop_large: '636x273'
-      mobile: "300x129"
-      scrollsnap: "240x103"
+      desktop: '416x179'
+      mobile: '300x129'
+      scrollsnap: '240x103'
+      sizes: 100vw, 50vw, 33vw
+
+# Default
+permalinks:
+  page:
+    services: /services/:slug/

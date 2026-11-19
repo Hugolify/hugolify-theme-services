@@ -6,7 +6,8 @@ Edit `config/_default/module.yaml` to install the `hugolify-theme-services` modu
 
 ```yml
 imports:
-  - path: github.com/hugolify/hugolify-theme-services
+  - path: github.com/hugolify/hugolify-theme-services/v2
+  - path: github.com/hugolify/hugolify-theme/v2 # required
 ```
 
 ## Documentation
