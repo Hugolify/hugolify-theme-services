@@ -23,6 +23,7 @@ params:
             value: false
         icon:
           bootstrap_icons: suitcase-lg
+          hugeicons: Handshake
           iconoir: suitcase
           lucide: handshake
           material_icons: business_center
